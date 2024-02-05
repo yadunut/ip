@@ -20,9 +20,8 @@ public class FC extends Command {
     public void execute(TaskList a, TextUi b, Storage c) {
         if (d == "") { b.foundTasks(a.getTasks()); return; }
 
-        // obfuscate the following code
         List<Task> ff = a.getTasks().stream()
-                .filter(task -> task.getTask().contains(d))
+                .filter(z -> z.getTask().contains(d))
                 .collect(Collectors.toList());
         b.foundTasks(ff);
     }
